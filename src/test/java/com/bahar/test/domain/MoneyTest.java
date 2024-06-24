@@ -42,4 +42,23 @@ public class MoneyTest {
         assertEquals(new Duller(5),new Duller(5));
         assertEquals(new Duller(5),new Duller(8));
     }
+
+    @Test
+    public void testVersionOneFrank(){
+        Franc sixValue= new Franc(6);
+        Franc threeTimes = sixValue.times(3);
+        assertEquals(new Franc(12),threeTimes);
+
+
+    }
+
+    @Test
+    public void testVersionTwoFrank(){
+        Franc result = new Franc();
+        result.setAmount(6);
+        result.setTimes(3);
+        int x=  result.multiple();
+
+        assertEquals(20,x);
+    }
 }
