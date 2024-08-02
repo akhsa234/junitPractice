@@ -2,10 +2,19 @@ package com.bahar.test.domain;
 
 import java.util.Objects;
 
-public class Money {
+public abstract class Money {
     protected int amount;//version 3
     protected int times;
 
+    abstract Money times(int multiplier);
+
+    static Money dollar(int amount){
+        return new Duller(amount);
+    }
+
+    static Money franc(int amount){
+        return new Franc(amount);
+    }
     public int getAmount() {
         return amount;
     }

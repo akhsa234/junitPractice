@@ -11,7 +11,7 @@ public class Duller extends Money {
         this.amount=amount;
     }
 
-     Duller times(int multiple){
+     Money times(int multiple){
      //   amount *=multiple; // version 1
         return new Duller(amount*multiple); //version 2
     }
