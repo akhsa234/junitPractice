@@ -7,6 +7,11 @@ public class Franc extends Money {
         this.amount=amount;
     }
 
+    @Override
+    protected String currency() {
+        return "CHF";
+    }
+
     Money times(int multiple){
         return new Franc(amount*multiple);
     }

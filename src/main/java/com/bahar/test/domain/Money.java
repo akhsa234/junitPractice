@@ -5,6 +5,7 @@ import java.util.Objects;
 public abstract class Money {
     protected int amount;//version 3
     protected int times;
+    protected abstract String currency();
 
     abstract Money times(int multiplier);
 

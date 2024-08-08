@@ -11,7 +11,12 @@ public class Duller extends Money {
         this.amount=amount;
     }
 
-     Money times(int multiple){
+    @Override
+    protected String currency() {
+        return "USD";
+    }
+
+    Money times(int multiple){
      //   amount *=multiple; // version 1
         return new Duller(amount*multiple); //version 2
     }
