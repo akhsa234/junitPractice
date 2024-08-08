@@ -3,17 +3,17 @@ package com.bahar.test.domain;
 import java.util.Objects;
 
 public class Duller extends Money {
-   //private int amount;//version 2 - add privacy
-  // private int times;
+private String currency;
 
     public Duller(){}
     public Duller(int amount){
         this.amount=amount;
+        this.currency= "USD";
     }
 
     @Override
     protected String currency() {
-        return "USD";
+        return currency;
     }
 
     Money times(int multiple){
